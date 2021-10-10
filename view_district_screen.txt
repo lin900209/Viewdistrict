@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_app/scareens/view_district/components/view_district_body.dart';
+
+
+class View_District extends StatelessWidget {
+  static String routeName = "/view_district";
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('View_District'),
+      ),
+      body:Body(),
+    );
+  }
+}

@@ -1,0 +1,104 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_app/scareens/View_East/view_East_screen.dart';
+import 'package:flutter_app/scareens/View_Middle/view_Middle_screen.dart';
+import 'package:flutter_app/scareens/View_Nourth/view_Nourth_screen.dart';
+import 'package:flutter_app/scareens/View_South/view_South_screen.dart';
+import 'package:flutter_app/scareens/food/food_page_screen.dart';
+import 'package:flutter_app/scareens/food_East/food_East_screen.dart';
+import 'package:flutter_app/scareens/food_Middle/food_Middle_screen.dart';
+import 'package:flutter_app/scareens/food_South/food_South_screen.dart';
+
+import '../../../size_cinfig.dart';
+
+
+class Body extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      // padding: EdgeInsets.all(8),
+
+      child: Column(
+        children: <Widget>[
+          Text("請選擇想查找的區域",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: getProportionateScreenWidth(40),
+              fontWeight: FontWeight.bold,
+              height: 6,
+            ),
+          ),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: <Widget>[
+              RaisedButton(
+                child: Text('北部'),
+                padding: new EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 30.0),
+                onHighlightChanged:(bool b) {
+                  print(b);
+                },
+                onPressed: (){
+                  Navigator.pushNamed(context, ViewpageNourth.routeName);
+                },
+                textColor: Colors.white,
+                  color: Colors.cyan,
+                  shape: CircleBorder(
+                    // side: BorderSide(color: Colors.yellow[500])
+                  )
+
+              ),
+              RaisedButton(
+                child: Text('中部'),
+                padding: new EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 30.0),
+                onHighlightChanged:(bool b) {
+                  print(b);
+                },
+                onPressed: (){
+                  Navigator.pushNamed(context, Viewpagemiddle.routeName);
+                },
+                textColor: Colors.white,
+                  color: Colors.cyan,
+                  shape: CircleBorder(
+                    // side: BorderSide(color: Colors.yellow[500])
+                  )
+
+              ),
+              RaisedButton(
+                child: Text('南部'),
+                padding: new EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 30.0),
+                onHighlightChanged:(bool b) {
+                  print(b);
+                },
+                onPressed: (){
+                  Navigator.pushNamed(context, Viewpagesouth.routeName);
+                },
+                textColor: Colors.white,
+                  color: Colors.cyan,
+                  shape: CircleBorder(
+                    // side: BorderSide(color: Colors.yellow[500])
+                  )
+              ),
+              RaisedButton(
+                child: Text('東部'),
+                padding: new EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 30.0),
+                onHighlightChanged:(bool b) {
+                  print(b);
+                },
+                onPressed: (){
+                  Navigator.pushNamed(context, Viewpageeast.routeName);
+                },
+                textColor: Colors.white,
+                  color: Colors.cyan,
+                  shape: CircleBorder(
+                    // side: BorderSide(color: Colors.yellow[500])
+                  )
+              ),
+            ],
+          ),
+
+        ],
+      ),
+    );
+
+  }
+}
